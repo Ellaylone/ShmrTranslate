@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ShmrTranslate</string>
+
+    <string name="category_history">History</string>
+    <string name="category_settings">Settings</string>
+    <string name="category_translation">Translation</string>
 </resources>
