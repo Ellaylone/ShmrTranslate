@@ -1,7 +1,14 @@
 <resources>
     <string name="app_name">ShmrTranslate</string>
 
+    <!-- category names -->
     <string name="category_history">History</string>
     <string name="category_settings">Settings</string>
     <string name="category_translation">Translation</string>
+
+    <!-- languages -->
+    <string-array name="languages_array">
+        <item>English</item>
+        <item>Russian</item>
+    </string-array>
 </resources>
