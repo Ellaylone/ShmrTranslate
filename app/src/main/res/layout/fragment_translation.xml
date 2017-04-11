@@ -10,4 +10,18 @@
         android:layout_height="wrap_content"
         android:text="Translation" />
 
+    <EditText
+        android:id="@+id/textArea_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:overScrollMode="always"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:lines="6"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:scrollHorizontally="false"/>
+
 </LinearLayout>

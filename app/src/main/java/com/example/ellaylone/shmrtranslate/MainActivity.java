@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
         populateSpinner(R.id.origin_language);
         populateSpinner(R.id.translation_language);
 
+        setupTabLayout();
+    }
+
+    private void setupTabLayout () {
         // кастомный ViewPager чтобы избавиться от перелистывания фрагментов свайпом
         SwipeViewPager swipeViewPager = (SwipeViewPager) findViewById(R.id.viewpager);
 
