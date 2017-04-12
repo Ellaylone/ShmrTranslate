@@ -23,6 +23,9 @@ public class TranslationFragment extends Fragment {
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
 
+        //Toolbar customToolbar = (Toolbar) getActivity().findViewById(R.id.my_toolbar);
+        //customToolbar.addView(new TextView(getActivity(), ));
+
         View view = inflater.inflate(R.layout.fragment_translation, container, false);
 
         EditText textSource = (EditText) view.findViewById(R.id.text_area_source);
@@ -36,11 +39,11 @@ public class TranslationFragment extends Fragment {
                     InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(getView().getWindowToken(), 0);
                     new android.os.Handler().postDelayed(
-                        new Runnable() {
-                            public void run() {
-                                tabLayout.setVisibility(View.VISIBLE);
-                            }
-                        }, 100);
+                            new Runnable() {
+                                public void run() {
+                                    tabLayout.setVisibility(View.VISIBLE);
+                                }
+                            }, 100);
                 } else {
                     tabLayout.setVisibility(View.GONE);
                 }
@@ -49,5 +52,6 @@ public class TranslationFragment extends Fragment {
 
         return view;
     }
+
 
 }

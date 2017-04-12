@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setupTabLayout();
     }
 
-    private void setupTabLayout () {
+    private void setupTabLayout() {
         // кастомный ViewPager чтобы избавиться от перелистывания фрагментов свайпом
         SwipeViewPager swipeViewPager = (SwipeViewPager) findViewById(R.id.viewpager);
 
@@ -38,9 +38,10 @@ public class MainActivity extends AppCompatActivity {
         final TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
         tabLayout.setupWithViewPager(swipeViewPager);
+
     }
 
-    private void populateSpinner (int spinnerResourceId) {
+    private void populateSpinner(int spinnerResourceId) {
         Spinner spinner = (Spinner) findViewById(spinnerResourceId);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.languages_array, android.R.layout.simple_spinner_item);

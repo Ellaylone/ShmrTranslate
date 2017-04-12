@@ -28,12 +28,12 @@ public class SwipeViewPager extends ViewPager {
     }
 
     @Override
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
+    public boolean isEnabled() {
+        return enabled;
     }
 
     @Override
-    public boolean isEnabled() {
-        return enabled;
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 }

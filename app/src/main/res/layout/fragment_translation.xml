@@ -2,16 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
     android:clickable="true"
     android:focusable="true"
-    android:focusableInTouchMode="true">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Translation" />
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <EditText
         android:id="@+id/text_area_source"
@@ -20,11 +15,11 @@
         android:background="@drawable/border"
         android:gravity="top|left"
         android:inputType="textMultiLine"
+        android:lines="6"
         android:overScrollMode="always"
+        android:scrollHorizontally="false"
         android:scrollbarStyle="insideInset"
         android:scrollbars="vertical"
-        android:lines="6"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:scrollHorizontally="false"/>
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </LinearLayout>

@@ -14,6 +14,9 @@
         <item name="tabIndicatorColor">@android:color/white</item>
         <item name="tabSelectedTextColor">@android:color/white</item>
         <item name="tabTextAppearance">@style/CategoryTabTextAppearance</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabMaxWidth">0dp</item>
     </style>
 
     <!-- Text appearance style for a category tab -->
