@@ -4,8 +4,12 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent;
+import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,9 +39,25 @@ public class MainActivity extends AppCompatActivity {
         swipeViewPager.setAdapter(adapter);
         swipeViewPager.setEnabled(false);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        final TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
         tabLayout.setupWithViewPager(swipeViewPager);
+
+        KeyboardVisibilityEvent.setEventListener(this, new KeyboardVisibilityEventListener() {
+            @Override
+            public void onVisibilityChanged(boolean isOpen) {
+                if (isOpen) {
+                    tabLayout.setVisibility(isOpen ? View.GONE : View.VISIBLE);
+                } else {
+                    new android.os.Handler().postDelayed(
+                            new Runnable() {
+                                public void run() {
+                                    tabLayout.setVisibility(View.VISIBLE);
+                                }
+                            }, 100);
+                }
+            }
+        });
     }
 
     private void populateSpinner (int spinnerResourceId) {
